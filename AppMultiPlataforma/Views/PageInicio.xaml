@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMultiPlataforma.PageInicio"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#3F7373">
+            <Label 
+                Margin="20"
+                VerticalOptions="Center"
+                Text="Inicio de seción"                 
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="32"
+                HorizontalOptions="CenterAndExpand" />
+            <Frame
+                VerticalOptions="FillAndExpand"
+                CornerRadius="80"
+                Margin="15,20, 15, 15">
+                <StackLayout>
+                    <Image 
+                        VerticalOptions="Center"
+                        Source="user_profiles.png"
+                        Margin="120, 20, 120, 20"
+                        />                    
+                    <Label 
+                        VerticalOptions="Center"
+                        Text="Correo electronico" 
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand" />
+                    <Frame 
+                        CornerRadius="15"
+                        BackgroundColor="#BFBFB8"
+                        Margin="40, 10, 40, 0">
+                        <Entry 
+                            FontSize="Small"
+                            x:Name="texCorreo"/>
+                    </Frame>
+                    <Label 
+                        VerticalOptions="Center"
+                        Text="Contraceña" 
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand" />
+                    <Frame 
+                        CornerRadius="15"
+                        BackgroundColor="#BFBFB8"
+                        Margin="40, 10, 40, 0">
+                        <Entry 
+                            IsPassword="True"
+                            FontSize="Small"
+                            x:Name="texClave"/>
+                    </Frame>
+                    <Label
+                        x:Name="lblEr"
+                        HorizontalOptions="Center"
+                        TextColor="Red"/>
+                    <Button 
+                        BackgroundColor="#3F7373"
+                        CornerRadius="13"
+                        Margin="90,15"
+                        FontSize="14"
+                        TextTransform="None"
+                        TextColor="White"
+                        Text="Iniciar sesión"
+                        x:Name="btnIniciar"
+                        Clicked="btnIniciar_Clicked"/>
+                    <Button 
+                        BackgroundColor="#3F7373"
+                        CornerRadius="13"
+                        Margin="90,0"
+                        FontSize="14"
+                        TextTransform="None"
+                        TextColor="White"
+                        Text="Registrarse"
+                        x:Name="btnRegistrarse"
+                        Clicked="btnRegistrarse_Clicked"/>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

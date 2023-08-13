@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMultiPlataforma.PageCursos"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout BackgroundColor="#3F7373">
+            <Label 
+                HorizontalOptions="Center"
+                Text="Seleccion de cursos"
+                Margin="20"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="32"/>
+            <Frame
+                VerticalOptions="FillAndExpand"
+                CornerRadius="80"
+                Margin="15,0, 15, 15">
+                <StackLayout Spacing="0">
+                    <Image
+                        Margin="80,35"
+                        Source="books.png"
+                    />
+                    <Grid RowDefinitions="*,*"
+                          ColumnDefinitions="80,*">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            TextColor="Black"
+                            Text="Codigo"
+                        />
+                        <Entry
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Placeholder="Codigo del curso"
+                            x:Name="texCodigo"
+                            Margin="0,0,40,0"
+                        />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="10"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            TextColor="Black"
+                            Text="Curso"
+                        />
+                        <Entry
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Placeholder="Ingrese la asignatura"
+                            x:Name="texCurso"
+                            Margin="0,0,40,0"
+                            />
+                    </Grid>
+                    <Frame
+                        VerticalOptions="FillAndExpand"
+                        HasShadow="False">
+                        <StackLayout
+                            VerticalOptions="Center">
+                            <Label 
+                                HorizontalOptions="Center"
+                                FontSize="17"
+                                TextColor="LightCoral"
+                                x:Name="lblMMS"
+                            />
+                            <Image
+                                x:Name="pngError"
+                                Source="message.png"
+                                Margin="80, 10"
+                                IsVisible="false"
+                            />
+
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Grid>
+                        <Button
+                            BackgroundColor="#3F7373"
+                            Grid.Column="0"
+                            Margin="20,0"
+                            Text="Agregar"
+                            CornerRadius="16"
+                            TextTransform="None"
+                            x:Name="btnGuardar"
+                            Clicked="btnGuardar_Clicked"
+                        />
+                        <Button 
+                            BackgroundColor="#3F7373"
+                            Grid.Column="1"
+                            TextTransform="None"
+                            Margin="20,0"
+                            CornerRadius="16"
+                            Text="Ver datos"
+                            x:Name="btnVolver"
+                            Clicked="btnVolver_Clicked"
+                        />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

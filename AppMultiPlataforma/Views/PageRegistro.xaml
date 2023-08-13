@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMultiPlataforma.PageRegistro"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#3F7373">
+            <Grid 
+                HorizontalOptions="FillAndExpand"
+                ColumnDefinitions="70,*">
+                <ImageButton
+                    BackgroundColor="#3F7373"
+                    HorizontalOptions="End"
+                    Margin="15,0,0,0"
+                    Grid.Column="0"
+                    Source="volver.png"
+                    x:Name="btnVolver"
+                    Clicked="btnVolver_Clicked"
+                    />
+                <Label 
+                    HorizontalOptions="Start"
+                    Grid.Column="1"
+                    Margin="20"
+                    x:Name="lblTitulo"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="30" />
+            </Grid>
+            <Frame
+                VerticalOptions="FillAndExpand"
+                CornerRadius="80"
+                Margin="15,0, 15, 15">
+                <StackLayout>
+                    <ScrollView>
+                        <StackLayout Spacing="17">
+                            <Label 
+                                HorizontalOptions="Center"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="#3F7373"
+                                x:Name="lblxxx"
+                                Text="Ingrese sus datos"/>
+                            <Entry 
+                                x:Name="texName"
+                                Margin="45, 0"
+                                Placeholder="Nombre"
+                                FontSize="Small"/>
+                            <Entry 
+                                x:Name="texApellido1"
+                                Margin="45, 0"                        
+                                Placeholder="Primer Apellido"
+                                FontSize="Small"/>
+                            <Entry 
+                                x:Name="texApellido2"
+                                Margin="45, 0"                        
+                                Placeholder="Segundo Apellido"
+                                FontSize="Small"/>
+                            <Entry 
+                                x:Name="texID"
+                                Margin="45, 0"                        
+                                Placeholder="Cedula"
+                                FontSize="Small"/>
+                            <Entry 
+                                x:Name="texCell"
+                                Margin="45, 0"                        
+                                Placeholder="Telefono"
+                                FontSize="Small"/>
+                            <DatePicker
+                                Margin="45, 0"                        
+                                FontSize="Small"
+                                x:Name="dateBorn"/>
+                            <Entry 
+                                Margin="45, 0"                        
+                                Placeholder="Correo electronico"
+                                FontSize="Small"
+                                x:Name="texAddress"/>
+                            <Entry 
+                                Margin="45, 0"                        
+                                IsPassword="True"
+                                Placeholder="Contraceña (minimo 4 caracteres)"
+                                FontSize="Small"
+                                x:Name="texPassword1"/>
+                            <Entry 
+                                Margin="45, 0"                        
+                                Placeholder="Confirmar Contraceña"
+                                IsPassword="True"
+                                FontSize="Small"
+                                x:Name="texPassword2"/>
+                        <Grid
+                            HorizontalOptions="Center"
+                            RowDefinitions="30"
+                        >
+                        <Image
+                            IsVisible="false"
+                            Margin="10,0,140,0"
+                            Source="checked"
+                            x:Name="pngExito"
+                            />
+                        <Label
+                            VerticalOptions="Center"
+                            Margin="130,0,0,0"
+                            IsVisible="false"
+                            Text="Registro exitoso"
+                            x:Name="lblMMS"    
+                        />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*">
+                        <Button 
+                            Margin="15, 0"
+                            Grid.Column="0"
+                            BackgroundColor="#3F7373"
+                            CornerRadius="13"
+                            TextTransform="None"
+                            FontSize="14"
+                            TextColor="White"
+                            Text="Registrar"
+                            x:Name="btnRegistrarse"
+                            Clicked="btnRegistrarse_Clicked"/>
+                        <Button                                                         
+                            Margin="15, 0"
+                            Grid.Column="1"
+                            BackgroundColor="#3F7373"
+                            CornerRadius="13"
+                            TextTransform="None"
+                            FontSize="14"
+                            TextColor="White"
+                            Text="Continuar"
+                            x:Name="btnseguir"
+                            Clicked="btnseguir_Clicked"/>
+                    </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
